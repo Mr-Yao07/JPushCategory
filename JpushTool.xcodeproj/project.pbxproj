@@ -15,6 +15,8 @@
 		0B8191F221F07B2B0057C05E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8191F121F07B2B0057C05E /* main.m */; };
 		0B8191FC21F07B2B0057C05E /* JpushToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8191FB21F07B2B0057C05E /* JpushToolTests.m */; };
 		0B81920721F07B2B0057C05E /* JpushToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B81920621F07B2B0057C05E /* JpushToolUITests.m */; };
+		0B81922221F080580057C05E /* MsgManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B81921E21F080570057C05E /* MsgManager.m */; };
+		0B81922321F080580057C05E /* AppDelegate+Jpush.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B81921F21F080570057C05E /* AppDelegate+Jpush.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		0B81920221F07B2B0057C05E /* JpushToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JpushToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B81920621F07B2B0057C05E /* JpushToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JpushToolUITests.m; sourceTree = "<group>"; };
 		0B81920821F07B2B0057C05E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B81921E21F080570057C05E /* MsgManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgManager.m; sourceTree = "<group>"; };
+		0B81921F21F080570057C05E /* AppDelegate+Jpush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Jpush.m"; sourceTree = "<group>"; };
+		0B81922021F080570057C05E /* AppDelegate+Jpush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Jpush.h"; sourceTree = "<group>"; };
+		0B81922121F080570057C05E /* MsgManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,10 @@
 		0B8191D621F07B260057C05E = {
 			isa = PBXGroup;
 			children = (
+				0B81922021F080570057C05E /* AppDelegate+Jpush.h */,
+				0B81921F21F080570057C05E /* AppDelegate+Jpush.m */,
+				0B81922121F080570057C05E /* MsgManager.h */,
+				0B81921E21F080570057C05E /* MsgManager.m */,
 				0B8191E121F07B260057C05E /* JpushTool */,
 				0B8191FA21F07B2B0057C05E /* JpushToolTests */,
 				0B81920521F07B2B0057C05E /* JpushToolUITests */,
@@ -263,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B8191E721F07B260057C05E /* ViewController.m in Sources */,
+				0B81922221F080580057C05E /* MsgManager.m in Sources */,
 				0B8191F221F07B2B0057C05E /* main.m in Sources */,
 				0B8191E421F07B260057C05E /* AppDelegate.m in Sources */,
+				0B81922321F080580057C05E /* AppDelegate+Jpush.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,11 +446,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H3U5268VM4;
+				DEVELOPMENT_TEAM = JQ6F8T4EUE;
 				INFOPLIST_FILE = JpushTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JPush",
+					"$(PROJECT_DIR)/JCore",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = YLH.JpushTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,11 +468,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H3U5268VM4;
+				DEVELOPMENT_TEAM = JQ6F8T4EUE;
 				INFOPLIST_FILE = JpushTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JPush",
+					"$(PROJECT_DIR)/JCore",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = YLH.JpushTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
